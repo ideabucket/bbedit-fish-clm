@@ -159,7 +159,7 @@
         <string>wait</string>
 
         <!-- These are predefined fish variables: 
-             https://fishshell.com/docs/current/language.html#special-variables -->
+             https://fishshell.com/docs/current/language.html#special-variables
         <string>$PATH</string>
         <string>$CDPATH</string>
         <string>$FISH_DEBUG</string>
@@ -223,9 +223,20 @@
         <string>$status</string>
         <string>$status_generation</string>
         <string>$USER</string>
-        <string>$version</string>
+        <string>$version</string> -->
     </array>
-        
+    
+    <key>BBLMKeywordPatterns</key>
+    <array>
+        <dict>
+            <key>RunKind</key>
+            <string>com.barebones.bblm.variable</string>
+            <key>Pattern</key>
+            <string>\s\$[A-Za-z0-9_]+</string>
+        </dict>
+    </array>
+
+    
     <!-- Un/Comment Tokens -->
     <key>BBLMCommentLineDefault</key>       <string>#</string>
     
@@ -234,7 +245,6 @@
     <dict>
         <key>Identifier and Keyword Character Class</key>
         <string>A-Za-z0-9_\$</string>
-        
         
         <key>Comment Pattern</key>
         <string><![CDATA[
@@ -306,6 +316,7 @@
                 (?P>comment)|(?P>string)
             )
         ]]></string>
+        
     </dict> 
 </dict>
 </plist>
