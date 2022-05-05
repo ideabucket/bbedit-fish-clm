@@ -35,28 +35,29 @@
 
     <key>BBLMKeywordList</key>
     <array>
-        <string>and</string>
-        <string>begin</string>
-        <string>break</string>
-        <string>case</string>
-        <string>continue</string>
-        <string>end</string>
-        <string>for</string>
-        <string>function</string>
+		<!-- These are fish's "core keywords":
+			 https://fishshell.com/docs/current/commands.html#keywords -->
         <string>if</string>
-        <string>not</string>
-        <string>or</string>
-        <string>return</string>
-        <string>switch</string>
+        <string>else</string>
+        <string>for</string>
         <string>while</string>
+        <string>break</string>
+        <string>continue</string>
+        <string>function</string>
+        <string>return</string>
+        <string>begin</string>
+        <string>end</string>
+        <string>and</string>
+        <string>or</string>
+        <string>not</string>
+        <string>switch</string>
+        <string>case</string>
     </array>
     
     <key>BBLMPredefinedNameList</key>
     <array>
-        <string>$argv</string>
-        <string>$status</string>
-        <string>$fish_pid</string>
-        <string>$last_pid</string>
+        <!-- And this is every other command fish knows: 
+        	 https://fishshell.com/docs/current/commands.html#the-full-list -->
         <string>_</string>
         <string>abbr</string>
         <string>alias</string>
@@ -77,7 +78,6 @@
         <string>dirs</string>
         <string>disown</string>
         <string>echo</string>
-        <string>else</string>
         <string>emit</string>
         <string>eval</string>
         <string>exec</string>
@@ -157,6 +157,73 @@
         <string>umask</string>
         <string>vared</string>
         <string>wait</string>
+
+    	<!-- These are predefined fish variables: 
+    		 https://fishshell.com/docs/current/language.html#special-variables -->
+		<string>$PATH</string>
+		<string>$CDPATH</string>
+		<string>$FISH_DEBUG</string>
+		<string>$FISH_DEBUG_OUTPUT</string>
+		<string>$LANG</string>
+		<string>$LC_ALL</string>
+		<string>$LC_COLLATE</string>
+		<string>$LC_CTYPE</string>
+		<string>$LC_MESSAGES</string>
+		<string>$LC_MONETARY</string>
+		<string>$LC_NUMERIC</string>
+		<string>$LANG</string>
+		<string>$fish_color_normal</string>
+		<string>$fish_color_command</string>
+		<string>$fish_color_keyword</string>
+		<string>$fish_color_quote</string>
+		<string>$fish_color_redirection</string>
+		<string>$fish_color_end</string>
+		<string>$fish_color_error</string>
+		<string>$fish_color_param</string>
+		<string>$fish_color_option</string>
+		<string>$fish_color_comment</string>
+		<string>$fish_color_selection</string>
+		<string>$fish_color_operator</string>
+		<string>$fish_color_escape</string>
+		<string>$fish_color_autosuggestion</string>
+		<string>$fish_color_cwd</string>
+		<string>$fish_color_user</string>
+		<string>$fish_color_host</string>
+		<string>$fish_color_host_remote</string>
+		<string>$fish_color_cancel</string>
+		<string>$fish_color_search_match</string>
+		<string>$fish_ambiguous_width</string>
+		<string>$fish_emoji_width</string>
+		<string>$fish_autosuggestion_enabled</string>
+		<string>$fish_handle_reflow</string>
+		<string>$fish_key_bindings</string>
+		<string>$fish_escape_delay_ms</string>
+		<string>$fish_greeting</string>
+		<string>$fish_history</string>
+		<string>$fish_trace</string>
+		<string>$fish_user_paths</string>
+		<string>$umask</string>
+		<string>$BROWSER</string>
+		<string>$_</string>
+		<string>$argv</string>
+		<string>$CMD_DURATION</string>
+		<string>$COLUMNS</string>
+		<string>$LINES</string>
+		<string>$fish_kill_signal</string>
+		<string>$fish_killring</string>
+		<string>$fish_pid</string>
+		<string>$history</string>
+		<string>$HOME</string>
+		<string>$hostname</string>
+		<string>$IFS</string>
+		<string>$last_pid</string>
+		<string>$PWD</string>
+		<string>$pipestatus</string>
+		<string>$SHLVL</string>
+		<string>$status</string>
+		<string>$status_generation</string>
+		<string>$USER</string>
+		<string>$version</string>
     </array>
         
     <!-- Un/Comment Tokens -->
@@ -166,7 +233,7 @@
     <key>Language Features</key>
     <dict>
         <key>Identifier and Keyword Character Class</key>
-        <string>A-Za-z0-9_$</string>
+        <string>A-Za-z0-9_\$</string>
         
         
         <key>Comment Pattern</key>
