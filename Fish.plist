@@ -303,7 +303,7 @@
         <key>Skip Pattern</key>
         <string><![CDATA[
             (?x:
-                (?P>comment)|(?P>string)|\$\S+
+                (?P>comment)|(?P>string)
             )
         ]]></string>
     </dict> 
